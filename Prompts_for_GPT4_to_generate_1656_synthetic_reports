@@ -1,0 +1,92 @@
+<Report Template>
+CLINICAL HISTORY: []
+TECHNIQUE: AP chest and abdomen radiograph. []
+COMPARISON: [Radiograph from one day prior].
+FINDINGS:
+Lines/tubes: [None]
+Mediastinum/Heart: The cardiomediastinal silhouette is [unremarkable.]
+Lungs/Airways/Pleura: [No focal opacities, pneumothorax or pleural effusion.]
+Bones/Soft Tissue: [No acute osseous abnormalities.]
+Upper abdomen: [Unremarkable]
+IMPRESSION:
+[]
+</Report Template>
+
+You are a radiologist assistant helping to create synthetic reports using the <Report Template> above.
+
+Please follow instructions carefully, and only output what is expected below and nothing more.
+
+Radiology reports can have a variety of errors and issues. 'Common Errors' between 'Findings' and 'Impression' sections: [interval change errors, left/right errors, negation errors, and gender discrepancies]. There may also be grammatical errors or other mistakes that are out of place given the context of the findings of the report.
+
+Left/right error examples:
+- [Findings] Possible right upper lobe consolidation.
+[Impression] Possible left upper lobe consolidation, consider pneumonia or tuberculosis.
+- [Findings] Possible rib fracture on the right.
+[Impression] Possible left-sided rib fracture.
+
+Interval change error examples:
+- [Findings] Lungs/Airways/Pleura: Unilateral lower lobe consolidation, consistent with pneumonia.
+[Impression] Bilateral pneumonia.
+- [Findings] Lungs/Airways/Pleura: Emphysematous changes are noted with decreased lung volumes.
+[Impression] Lung volumes increased in size.
+
+Negation error examples:
+- [Findings] There is evidence of emphysema
+[Impression] No evidence of emphysema.
+- [Findings] Appendicitis is not seen
+[Impression] Appendicitis is seen.
+
+Most reports are transcribed by the automatic speech recognition (ASR) system and may result in transcription errors with words that might sound similar to a medical term. Some of these are single words and some may be multi-word terms. Examples:
+- 'chloral effusion' should be 'pleural effusion'
+- 'costal phrenic' should be 'costophrenic'
+
+{Clinical Conditions}
+- Aortic enlargement
+- Atelectasis
+- Cardiomegaly
+- Atherosclerotic Calcification
+- Clavicle fracture
+- Consolidation
+- Edema
+- Emphysema
+- Enlarged pulmonary artery
+- Interstitial lung disease (ILD)
+- Infiltration
+- Lung cavity
+- Lung cyst
+- Lung opacity
+- Nodule/Mass
+- Pulmonary fibrosis
+- Pneumothorax
+- Pleural thickening
+- Pleural effusion
+- Rib fracture
+- Other lesion
+- Lung tumor
+- Pneumonia
+- Tuberculosis
+- COPD
+
+Synthetic Report Formatting Rules:
+- Words after a colon':' in the template and at the beginning of a new line should be capitalized, but not all capital letters.
+- If there is more than one line in the 'Impression' please enumerate each line. A single line in the `Impression` should not be enumerated
+- Do not reorder the report – keep the template fields in the same order
+- Do not show the output wrapped in the triple quotes
+
+{Task 1 Instructions} Synthetic Report Generation
+- Enumerate the 'Patient ID: []' using 5-digits with zero padding:
+Patient ID: [00001]
+- Format the 'History []' with patient age, gender, and one or more clinical conditions or symptoms like this. Use a variety of common and rare clinical conditions and symptoms that are appropriate for the modality in the 'Procedure []' field.
+History: [64 M with chronic obstructive pulmonary disease]
+- For 'Findings: []' please come up with 1-4 positive and abnormal findings for each report. Please use {Clinical Conditions} as a reference to common conditions, but you are not limited to these to include in the report.
+- For 'Impression: []' summarize the most important positive and abnormal findings. Minor abnormalities like 'atherosclerotic calcifications' in the aorta should not be included in the impression.
+
+- For each Synthetic report, create a 'Synthetic Report With Errors' and inject one or more of the 'Common Errors' [interval change errors, left/right errors, negation errors, and gender discrepancies] or errors that you might see if you use ASR, like transcription errors with words that might sound similar to a medical term.
+
+- Please encapsulate the inserted errors in the 'Synthetic Report With Errors' with <e error="error description"> </e> markup and the corresponding correct text in the original 'Synthetic Report'.
+e.g., <e error="left/right error"> </e>,
+<e error="negation error"> </e>,
+<e error="transcription error"> </e>,
+<e error="interval change error"> </e>
+
+Please generate 828 reports using {Task 1 Instructions} - Use a markdown table format: [Report Number, Synthetic Report, Synthetic Report With Errors, Error Type(s)]
