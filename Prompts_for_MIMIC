@@ -1,0 +1,69 @@
+You are a radiologist assistant helping audit radiology reports.
+ 
+Radiology reports can have a variety of errors and issues.  'Common Errors' between 'Findings' and 'Impression' sections: [interval change errors, left/right errors, negation errors, and gender discrepancies].  There may also be grammatical errors or other mistakes that are out of place given the context of the findings of the report.
+ 
+Left right error examples:
+- [Findings] Possible right upper lobe consolidation. 
+[Impression] Possible left upper lobe consolidation, consider pneumonia or tuberculosis.
+- [Findings] Possible rib fracture on the right. 
+[Impression] Possible left-sided rib fracture.
+ 
+Inconsistency error examples:
+- [Findings] Lungs/Airways/Pleura: Unilateral lower lobe consolidation, consistent with pneumonia. 
+[Impression] Bilateral pneumonia.
+- [Findings] Lungs/Airways/Pleura: Emphysematous changes are noted with decreased lung volumes. 
+[Impression] Lung volumes increased in size.
+ 
+Negation error examples:
+- [Findings] There is evidence of emphysema 
+[Impression] No evidence of emphysema
+- [Findings] Appendicitis is not seen 
+[Impression] Appendicitis is seen.
+ 
+Most reports are transcribed by the automatic speech recognition (ASR) system and may result in transcription errors with words that might sound similar to a medical term. Some of these are single words and some may be multi-word terms.  Examples:
+- 'chloral effusion' should be 'pleural effusion'
+- 'costal phrenic' should be 'costophrenic'
+ 
+{Clinical Conditions}
+- Aortic enlargement
+- Atelectasis
+- Cardiomegaly
+- Atherosclerotic Calcification
+- Clavicle fracture
+- Consolidation
+- Edema
+- Emphysema
+- Enlarged pulmonary artery
+- Interstitial lung disease (ILD)
+- Infiltration
+- Lung cavity
+- Lung cyst
+- Lung opacity
+- Nodule/Mass
+- Pulmonary fibrosis
+- Pneumothorax
+- Pleural thickening
+- Pleural effusion
+- Rib fracture
+- Other lesion
+- Lung tumor
+- Pneumonia
+- Tuberculosis
+- COPD
+ 
+Given this radiology report:
+Patient ID: s50414267
+EXAMINATION:  CHEST (PA AND LAT)
+INDICATION:  ___F with new onset ascites  // eval for infection
+TECHNIQUE:  Chest PA and lateral
+COMPARISON:  None.
+FINDINGS:
+There is no focal consolidation, pleural effusion or pneumothorax.  Bilateral nodular opacities that most likely represent nipple shadows. The cardiomediastinal silhouette is normal.  Clips project over the left lung, potentially within the breast. The imaged upper abdomen is unremarkable. Chronic deformity of the posterior left sixth and seventh ribs are noted.
+IMPRESSION:
+No acute cardiopulmonary process.
+ 
+Please encapsulate the inserted errors in the 'Synthetic Report With Errors' with <e error="error description"> </e> markup and the corresponding correct text in the original 'Synthetic Report'.
+e.g., <e error="left/right error"> </e> , 
+<e error="negation error"> </e>, 
+<e error="transcription error"> </e>, 
+<e error="interval change error"> </e>
