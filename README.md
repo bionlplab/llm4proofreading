@@ -69,8 +69,8 @@ XXX
 
 Please cite the repo if you use the data or code in this repository.
 ```
-@misc{alpaca,
-  author = {XXX },
+@misc{XXX2024llm,
+  author = {XXX},
   title = {Reportedly LLMs: Generative Large Language Models for Proofreading Errors in Radiology Reports},
   year = {2024},
   publisher = {XXX},
