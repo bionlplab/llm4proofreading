@@ -1,18 +1,16 @@
-# Reportedly LLMs: Generative Large Language Models for Proofreading Errors in Radiology Reports
+# Generative Large Language Models Trained for Detecting Errors in Radiology Reports
 
-This is the repository for Reportedly LLMs, which aims to build task-specific LLMs for medical proofreading. 
-
-This repository is temporarily for review purposes; we will release a published version later.
+This is the repository for Generative Large Language Models Trained for Detecting Errors in Radiology Reports.
 
 
 ## Overview
 
-The overall workflow of Reportedly LLMs.
+The overall workflow of large language models (LLMs).
 
 ![image](https://github.com/user-attachments/assets/e221be30-1eb9-46b0-bab8-828d95d4790b)
 
 
-Our work consists of four parts:
+Our work consists of three phases:
 
 (1). Dataset Construction
 
