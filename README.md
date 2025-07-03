@@ -7,7 +7,10 @@ This is the repository for Generative Large Language Models Trained for Detectin
 
 The overall workflow of large language models (LLMs).
 
+
+
 ![image](https://github.com/user-attachments/assets/e221be30-1eb9-46b0-bab8-828d95d4790b)
+
 
 
 Our work consists of three phases:
