@@ -9,7 +9,8 @@ This repository is temporarily for review purposes; we will release a published 
 
 The overall workflow of Reportedly LLMs.
 
-Figure 1 will be presented here after the manuscript is published.
+![image](https://github.com/user-attachments/assets/e221be30-1eb9-46b0-bab8-828d95d4790b)
+
 
 Our work consists of four parts:
 
@@ -61,23 +62,19 @@ We evaluated the performance of models such as Llama-3 and GPT-4 on the test set
 Please refer to demo.ipynb for the relevant code.
 ```
 
-### Authors
-
-XXX
 
 ### Citation
 
 Please cite the repo if you use the data or code in this repository.
 ```
-@misc{XXX2024llm,
-  author = {XXX},
-  title = {Reportedly LLMs: Generative Large Language Models for Proofreading Errors in Radiology Reports},
-  year = {2024},
-  publisher = {XXX},
-  journal = {XXX},
+@article{sun2025generative,
+  title={Generative large language models trained for detecting errors in radiology reports},
+  author={Sun, Cong and Teichman, Kurt and Zhou, Yiliang and Critelli, Brian and Nauheim, David and Keir, Graham and Wang, Xindi and Zhong, Judy and Flanders, Adam E and Shih, George and others},
+  journal={Radiology},
+  volume={315},
+  number={2},
+  pages={e242575},
+  year={2025},
+  publisher={Radiological Society of North America}
 }
 ```
-
-### Acknowledgements
-
-XXX
